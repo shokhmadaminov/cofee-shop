@@ -75,6 +75,21 @@ img {
 .primary-btn:hover {
     opacity: 0.8;
 }
+.section-top-title {
+    font-family: var(--text-font);
+    font-weight: 600;
+    font-size: 1.125rem;
+    line-height: 1.2;
+    color: var(--primary);
+    margin-bottom: 0.75rem;
+}
+.section-title {
+    font-family: var(--title-font);
+    font-weight: 400;
+    font-size: 3rem;
+    line-height: 1.3;
+    color: var(--white);
+}
 
 
 /* header section styles */
@@ -204,6 +219,46 @@ img {
 }
 
 
+/* our history section styles */
+.our-history .container {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 1rem;
+}
+.our-history__left, .our-history__center {
+    width: 100%;
+    max-width: 298px;
+}
+.our-history__left img, .our-history__center img {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+}
+.our-history__left {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.our-history__right {
+    width: 100%;
+    max-width: 510px;
+    min-width: 415px;
+    background-color: var(--section-bg);
+    padding: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.our-history__title {
+    margin-bottom: 2.25rem;
+}
+.our-history__text {
+    text-transform: capitalize;
+    line-height: 1.8;
+}
+
+
 /* responsive */
 /* large - 1280 */
 @media only screen and (max-width: 1280px) {
@@ -239,6 +294,11 @@ img {
 
 /* small - 768 */
 @media only screen and (max-width: 768px) {
+    /* global */
+    .section-title {
+        font-size: 2rem;
+    }
+
     /* main */
     .main {
         gap: 7rem;
@@ -272,6 +332,31 @@ img {
         height: 300px;
         object-fit: cover;
     }
+
+    /* our history */
+    .our-history .container {
+        flex-wrap: wrap;
+    }
+    .our-history__left, .our-history__center {
+        max-width: calc(50% - 8px);
+        height: 300px;
+    }
+    .our-history__left img {
+        flex-grow: 1;
+        height: calc(50% - 8px);
+    }
+    .our-history__center img {
+        height: 100%;
+    }
+    .our-history__left {
+        gap: 1rem;
+    }
+    .our-history__right {
+        max-width: 100%;
+    }
+    .our-history__title {
+        margin-bottom: 1.8rem;
+    }
 }
 
 /* extra small - 640 */
@@ -279,6 +364,9 @@ img {
     /* global */
     a {
         font-size: 1rem;
+    }
+    .section-top-title {
+        margin-bottom: 0.4rem;
     }
 
     /* main */
@@ -327,5 +415,13 @@ img {
     }
     .features__item img {
         height: 200px;
+    }
+
+    /* our history */
+    .our-history__right {
+        padding: 2rem;
+    }
+    .our-history__title {
+        margin-bottom: 1.2rem;
     }
 }

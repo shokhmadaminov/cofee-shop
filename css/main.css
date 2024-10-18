@@ -14,9 +14,6 @@
     --text-font: "Urbanist", "Arial", sans-serif;
     --title-font: "Righteous", "Georgia", serif;
     --link-font: "Inter", "Arial", sans-serif;
-
-    /* sizes */
-    --140: 140px;
 }
 
 /* global styles */
@@ -57,6 +54,9 @@ h1, h2, h3, h4 {
     font-family: var(--title-font);
     font-weight: 400;
     color: var(--white);
+}
+img {
+    display: block;
 }
 .container {
     width: 100%;
@@ -114,6 +114,14 @@ h1, h2, h3, h4 {
 }
 
 
+/* main */
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 8.75rem;
+}
+
+
 /* hero section styles */
 .hero {
     padding: 9.188rem 0 10.375rem;
@@ -164,6 +172,38 @@ h1, h2, h3, h4 {
 }
 
 
+/* features section styles */
+.features__list {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 1rem;
+}
+.features__item {
+    width: 100%;
+    max-width: 366px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.features__title {
+    font-size: 1.5rem;
+    line-height: 1.2;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: auto;
+}
+.features__title span {
+    color: var(--primary);
+}
+.features__item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
 /* responsive */
 /* large - 1280 */
 @media only screen and (max-width: 1280px) {
@@ -199,6 +239,11 @@ h1, h2, h3, h4 {
 
 /* small - 768 */
 @media only screen and (max-width: 768px) {
+    /* main */
+    .main {
+        gap: 7rem;
+    }
+
     /* hero */
     .hero {
         padding: 6rem 0;
@@ -213,6 +258,20 @@ h1, h2, h3, h4 {
     .hero__btn {
         padding: 1rem 2rem;
     }
+
+    /* features */
+    .features__list {
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+    }
+    .features__item {
+        max-width: 600px;
+    }
+    .features__item img {
+        height: 300px;
+        object-fit: cover;
+    }
 }
 
 /* extra small - 640 */
@@ -220,6 +279,11 @@ h1, h2, h3, h4 {
     /* global */
     a {
         font-size: 1rem;
+    }
+
+    /* main */
+    .main {
+        gap: 6rem;
     }
     
     /* header */
@@ -249,5 +313,19 @@ h1, h2, h3, h4 {
     }
     .hero__text {
         font-size: 1rem;
+    }
+
+    /* features */
+    .features__list {
+        gap: 1rem;
+    }
+    .features__item {
+        gap: 0.8rem;
+    }
+    .features__title {
+        font-size: 1rem;
+    }
+    .features__item img {
+        height: 200px;
     }
 }

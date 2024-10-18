@@ -241,6 +241,7 @@ h1, h2, h3, h4 {
 
     /* hero */
     .hero {
+        background-position: bottom 0 right -200px;
         padding: 5rem 0;
     }
     .hero__title {

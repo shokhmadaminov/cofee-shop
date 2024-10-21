@@ -4,6 +4,7 @@
     --white: #fff;
     --primary: #C99E71;
     --white-80: #FFFFFFCC;
+    --border-color: #32323D;
 
     /* background colors */
     --site-bg: #14110E;
@@ -373,6 +374,38 @@ img {
     padding: 1.25rem 2.25rem;
 }
 
+/* menu section styles */
+.menu {
+    text-align: center;
+}
+.menu__title {
+    margin-bottom: 3.5rem;
+}
+.menu__list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2.25rem 2.5rem;
+}
+.menu__item {
+    width: calc(50% - 1.25rem);
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 1.5rem;
+    border: 1px solid var(--border-color);
+}
+.menu__item-title {
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 1.2;
+}
+.menu__item-price {
+    font-size: 1.125rem;
+    color: var(--primary);
+    margin-left: auto;
+}
+
 
 
 /* responsive */
@@ -419,6 +452,19 @@ img {
     }
     .coffee-machine__content {
         max-width: 500px;
+    }
+
+    /* menu */
+    .menu__list {
+        gap: 2rem 1rem;
+    }
+    .menu__item {
+        width: calc(50% - 0.5rem);
+        flex-direction: column;
+        padding: 1rem 0.6rem;
+    }
+    .menu__item-price {
+        margin-right: auto;
     }
 }
 
@@ -617,7 +663,7 @@ img {
 
     /* coffee machine */
     .coffee-machine__img {
-        width: 200px;
+        width: 150px;
         height: auto;
     }
     .coffee-machine__content {
@@ -628,5 +674,22 @@ img {
     }
     .coffee-machine__btn {
         padding: 1rem 2rem;
+    }
+
+    /* menu */
+    .menu__title {
+        margin-bottom: 1rem;
+    }
+    .menu__list {
+        gap: 0.8rem 0.4rem;
+    }
+    .menu__item {
+        gap: 0.6rem;
+    }
+    .menu__item-title {
+        font-size: 1rem;
+    }
+    .menu__item-price {
+        font-size: 1rem;
     }
 }

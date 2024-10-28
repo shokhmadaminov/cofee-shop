@@ -144,6 +144,7 @@ input {
     display: flex;
     flex-direction: column;
     gap: 8.75rem;
+    margin-bottom: 8.75rem;
 }
 
 
@@ -562,6 +563,79 @@ input {
 }
 
 
+/* footer styles */
+.footer {
+
+}
+
+.footer-top {
+    margin-bottom: 4.5rem;
+}
+.footer-top .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer-top__logo {
+    display: flex;
+}
+.footer-top__nav:last-child {
+    display: none;
+}
+.footer-top__nav-list {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+}
+.footer-top__nav-link {
+    font-family: var(--text-font);
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 1;
+    color: var(--white);
+}
+.footer-top__nav-link:hover {
+    color: var(--primary);
+    text-decoration: underline;
+}
+.footer-top__form {
+    background-color: var(--section-bg);
+    padding: 0.75rem 0.75rem 0.75rem 1.75rem;
+    border-radius: 2.25rem;
+    display: flex;
+    gap: 0.4rem;
+}
+.footer-top__form input {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--white);
+    outline: none;
+}
+.footer-top__form input::placeholder {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--white-80);
+}
+.footer-top__form button {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: var(--primary);
+    transform: rotate(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer-bottom {
+    background-color: var(--section-bg);
+    text-align: center;
+    color: var(--white);
+    padding: 2rem 1rem;
+}
 
 
 
@@ -572,6 +646,26 @@ input {
     .header__logo {
         margin-left: auto;
         margin-right: auto;
+    }
+
+    /* footer */
+    .footer-top .container {
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+    .footer-top__nav-list {
+        gap: 1rem;
+    }
+    .footer-top__nav-desktop {
+        display: none;
+    }
+    .footer-top__nav:last-child {
+        width: 100%;
+        display: block;
+    }
+    .footer-top__nav-list {
+        width: 100%;
+        justify-content: space-between;
     }
 }
 
@@ -756,6 +850,25 @@ input {
     .reservation__map {
         height: 300px;
     }
+
+    /* footer */
+    .footer-top .container {
+        align-items: start;
+        flex-direction: column;
+    }
+    .footer-top__logo {
+        display: none;
+    }
+    .footer-top__nav-desktop {
+        display: block;
+    }
+    .footer-top__nav-list {
+        flex-direction: column;
+        align-items: start;
+    }
+    .footer-top__nav:last-child {
+        display: none;
+    }
 }
 
 /* extra small - 640 */
@@ -903,5 +1016,13 @@ input {
     }
     .reservation__form-btn {
         padding: 1rem 2rem;
+    }
+
+    .main {
+        margin-bottom: 4rem;
+    }
+    /* footer */
+    .footer-top {
+        margin-bottom: 2rem;
     }
 }
